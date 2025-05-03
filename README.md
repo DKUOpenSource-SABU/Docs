@@ -7,6 +7,6 @@
   ├── frontend/       ← 프론트 전용 기술 문서
   ├── backend/        ← 백엔드 전용 기술 문서
   ├── common/         ← 공통 기술 문서 (CI/CD, 보안, 인증 등)
-  ├── metting/        ← 회의록 문서
+  ├── meeting/        ← 회의록 문서
   └── README.md
 ```
