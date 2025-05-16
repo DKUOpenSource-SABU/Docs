@@ -1,9 +1,16 @@
-|기능 분류  |기능 설명       |HTTP Method|Endpoint                            |pid    |Request                                              |Response               |
-|-------|------------|-----------|------------------------------------|-------|-----------------------------------------------------|-----------------------|
-|[클러스터링]|ETF 종목 코드 검색|GET        |/etfs/search?q={ticker}             |CLU-001|ticker                                             |ticker, name           |
-|       |ETF 종목 코드 검색|GET        |/etfs/search?cluster={ticker}            |CLU-002|ticker                                             |ticker, name           |
-|       |클러스터 실행     |POST       |/clustering/run                     |CLU-003|ets, n_clusters                                      |message, clusters   |
-|       |클러스터 추천     |GET        |/clustering/recommendation          |CLU-005|                                                     |recommended_etfs       |
-|[백테스팅] |백테스트 실행     |POST       |/backtest/run                       |BTE-001|etfs, start_date, end_date, initial_capital, fee_rate|message, backtest_id   |
-|       |백테스트 결과 조회  |GET        |/backtest/results?backtest_id={id}  |BTE-002|                                                     |                       |
-|       |자산 변동 추이 조회 |GET        |/backtest/variation?backtest_id={id}|BTE-003|                                                     |dates, estimated_assets|
+
+## 클러스터링 API
+기능 분류 | 기능 설명 | HTTP Method | Endpoint | PID | Request 예시 | Response 예시
+-- | -- | -- | -- | -- | -- | --
+종목 검색 | Ticker로 종목 검색 | GET | /search/ticker | CLU-001 | json { "query": "AAPL" } | json { "results": [ { "ticker": "AAPL", "name": "Apple Inc." } ] }
+종목 검색 | 클러스터 번호로 종목 검색 | GET | /search/cluster | CLU-001 | json { "clusterId": 3 } | json { "results": [ { "ticker": "TSLA", "name": "Tesla Inc." } ] }
+ETF 상세 | 특정 Ticker의 ETF 정보 조회 | GET | /etf/{ticker} | CLU-002 | 없음 (URL Path 사용) | json { "ticker": "SPY", "holdings": [...], "financials": {...} }
+클러스터링 | 사용자가 담은 종목의 클러스터링 결과 조회 | POST | /cluster/analyze | CLU-004 | json { "tickers": ["AAPL", "GOOG", "TSLA"] } | json { "clusters": { "0": ["AAPL", "GOOG"], "1": ["TSLA"] } }
+클러스터링 | 담은 종목 기반 유사 종목 추천 | POST | /cluster/recommend | CLU-006 | json { "tickers": ["AAPL", "TSLA"] } | json { "recommendations": ["NVDA", "MSFT"] }
+
+## 백테스팅 API
+기능 분류 | 기능 설명 | HTTP Method | Endpoint | PID | Request 예시 | Response 예시
+-- | -- | -- | -- | -- | -- | --
+백테스트 | 백테스트 실행 | POST | /backtest/run | BTE-001 | json { "etfs": ["SPY", "QQQ"], "start_date": "2020-01-01", "end_date": "2023-01-01", "initial_capital": 100000, "fee_rate": 0.001 } | json { "message": "Backtest started", "backtest_id": "abc123" }
+백테스트 | 백테스트 결과 조회 | GET | /backtest/results?backtest_id={id} | BTE-002 | 없음 (QueryString 사용) | json { "returns": [...], "metrics": {...} }
+
