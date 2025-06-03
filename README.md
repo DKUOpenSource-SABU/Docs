@@ -7,11 +7,11 @@
 
 - 🎯 [기획 개요](./project-overview.md)
 - 📐 [디자인 문서](./design/)
-- 🧩 [유스케이스 / UML](./uml/)
-- 🌐 [API 명세](./api-spec/)
-- 📆 [WBS 및 일정표](./schedule/)
+- 🧩 [유스케이스 / UML](./planning/uml.png)
+- 🌐 [API 명세](./planning/api-spec.md)
+- 📆 [WBS 및 일정표](./planning/SABU_WBS.md)
 - 📊 [주차별 회의록](./meeting/)
-- 🚀 [발표자료 및 포스터](./presentation/)
+- 🚀 [발표자료 및 포스터](./speech/)
 - 🧭 [향후 개선 계획](./future-work.md)
 - ⚙️ [의사결정 기록](./decision-log.md)
 - 🪞 [회고 및 문제 해결](./retrospective.md)  
@@ -20,12 +20,14 @@
 
 ```bash
 📁 docs/
- ┣ 📂 design/           # 디자인 설계 문서
- ┣ 📂 uml/              # 유스케이스, 클래스 다이어그램 등
- ┣ 📂 api-spec/         # API 명세
- ┣ 📂 schedule/         # 일정표, WBS 등
- ┣ 📂 presentation/     # 발표용 자료
- ┣ 📂 meeting/          # 회의록
+ ┣ 📂 planning/       ← 전체 기획 (요구사항, WBS, API 명세서)
+ ┣ 📂 design/         ← 디자인 관련 문서 (UI 스케치, 와이어프레임, 프로토타입)
+ ┣ 📂 frontend/       ← 프론트 전용 기술 문서
+ ┣ 📂 backend/        ← 백엔드 전용 기술 문서
+ ┣ 📂 common/         ← 공통 기술 문서 (CI/CD, 보안, 인증 등)
+ ┣ 📂 speech/         ← 발표 문서 (주차 별 발표 PPT)
+ ┣ 📂 meeting/        ← 회의록 문서
  ┣ 📜 project-overview.md
  ┣ 📜 future-work.md
+ ┣ 📜 retrospective.md
  ┗ 📜 README.md
