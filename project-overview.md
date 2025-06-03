@@ -53,7 +53,7 @@
 ### Infra
 - Docker
 - Nginx
-- AWS EC2 / S3 (배포 환경)
+- AWS EC2 / Github Page
 
 ## 🧪 검증 및 테스트
 
