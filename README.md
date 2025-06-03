@@ -8,7 +8,7 @@
 - 🎯 [기획 개요](./project-overview.md)
 - 📐 [디자인 문서](./design/)
 - 🧩 [유스케이스 / UML](./planning/uml.png)
-- 🌐 [API 명세](./planning/api-spec.md)
+- 🌐 [API 명세](./planning/API_spec.md)
 - 📆 [WBS 및 일정표](./planning/SABU_WBS.md)
 - 📊 [주차별 회의록](./meeting/)
 - 🚀 [발표자료 및 포스터](./speech/)
