@@ -7,7 +7,7 @@
 
 ## 📁 문서 목록
 
-### 1. 📘 [Component Guide](https://github.com/DKUOpenSource-SABU/blob/main/frontend/docs/component-guide.md)
+### 1. 📘 [Component Guide](https://github.com/DKUOpenSource-SABU/frontend/blob/main/docs/component-guide.md)
 - 주요 컴포넌트 설계 방식
 - 공통 UI 요소 및 재사용 가능한 컴포넌트 구조
 - props, 이벤트 흐름 및 컴포넌트 간 역할 구분
@@ -28,6 +28,6 @@
 
 ---
 
-### 4. 📝 [README](./readme.md)
+### 4. 📝 [README](https://github.com/DKUOpenSource-SABU/frontend/blob/main/README.md)
 - 프론트엔드 디렉토리의 개요 및 문서 구조 안내
 - 문서 작성 규칙 및 참고 가이드
