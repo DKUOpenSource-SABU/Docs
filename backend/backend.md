@@ -25,7 +25,7 @@
 
 ---
 
-### 4. 📝 [README](https://github.com/DKUOpenSource-SABU/backend/blob/main/docs/readme.md)
+### 4. 📝 [README](https://github.com/DKUOpenSource-SABU/backend/blob/main/README.md)
 - `backend/` 디렉토리 구성 설명
 - 기술 스택, 폴더 구조, 주요 라이브러리 정리
 - 실행 방법 및 테스트 가이드 포함
